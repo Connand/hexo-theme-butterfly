@@ -221,3 +221,11 @@ if hexo-config('lazyload.enable') && hexo-config('lazyload.blur') && !hexo-confi
 
   &:hover
     text-decoration: none !important
+
+// Modify: 首頁背景無論有無開啟深色模式均套用背景遮罩(深淺差別而已)
+#page-header:before
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: alpha($dark-black, .3)
+      content: ''
